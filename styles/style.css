@@ -1,0 +1,667 @@
+/* fonts */
+@font-face {
+	font-family: "Playfair Display";
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+	src:  
+		url("../fonts/playfair-display-bold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Roboto Regular";
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+	src: 
+		url("../fonts/roboto-regular.woff2") format("woff2"),
+		url("../fonts/roboto-regular.woff") format("woff");
+}
+
+body {
+  	display: flex;
+  	flex-direction: column;
+	width: 1440px;
+	margin: 0 auto;
+	
+	font-family: "Roboto Regular", "Arial", sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 21px;
+	color: #000;
+
+	background-color: #fff;
+}
+
+/* headers fonts h2 */
+.page-main__reviews-header,
+.page-main__subscription-header {
+	max-width: 400px;
+
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	line-height: 20px;
+	letter-spacing: 1px;
+	text-indent: -10px;
+	text-align: center;
+	text-transform: uppercase;
+
+	transform: scaleX(1.07);
+}
+
+.page-main__reviews-title,
+.page-main__subscription-title {
+	font-family: "Playfair Display";
+	font-style: normal;
+	font-weight: 900;
+	font-size: 23px;
+	line-height: 31px;
+}
+
+/* center content */
+.page-header,
+.page-main__news-title,
+.page-main__reviews,
+.page-footer {
+	padding-left: 135px;
+	padding-right: 135px;
+}
+
+/* selection color */
+p::selection,
+a::selection,
+dt::selection,
+dd::selection,
+h1::selection,
+h2::selection,
+h3::selection {
+	color: #fff;
+	background-color: #FF7931;
+}
+
+/* resets links, lists, headers, paragraphs */
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+ul,
+dl,
+dd {
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+/* visually hidden */
+.visually-hidden:not(:focus):not(:active) {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+
+	white-space: nowrap;
+
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+/* header */
+.page-header {
+	position: relative;
+	
+	box-sizing: border-box;
+	
+	display: flex;
+	flex-direction: column;
+	width: auto;
+	min-height: 218px;
+	padding-top: 65px;
+}
+
+.page-header__logo {
+	display: flex;
+	align-self: center;
+	margin-bottom: 40px;
+}
+
+.page-header__logo-image {
+	width: 347px;
+  	height: 47px;
+}
+
+/* header-navigation and footer-navigation */
+.main-nav__list,
+.page-footer__nav-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+
+	font-size: 15px;
+	line-height: 18px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.main-nav__item,
+.page-footer__nav-item {
+	margin-right: 10px;
+}
+
+.main-nav__item:last-child,
+.page-footer__nav-item:last-child {
+	margin-right: 0;
+}
+
+.mai-nav__link:hover,
+.mai-nav__link:focus {
+	box-shadow: 0 3px 0 0 #FF7931;
+}
+
+.page-footer__nav-link:hover,
+.page-footer__nav-link:focus {
+	color: #FF7931;
+	box-shadow: 0 3px 0 0 #fff;
+}
+
+/* main */
+.page-main {
+	display: flex;
+  	flex-direction: column;
+	width: auto;
+}
+
+/* news section */
+.page-main__news {
+	position: relative;
+
+	box-sizing: border-box;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: auto;
+
+	width: 1440px;
+	min-height: 464px;
+	margin-bottom: 43px;
+	padding-bottom: 49px;
+	
+	overflow: hidden;
+}
+
+/* news decor icon */
+.page-main__news::after{
+	position: absolute;
+	top: 47px;
+	content: "";
+
+	width: 55px;
+	height: 55px;
+
+	background-image: url("../images/news_ico.svg");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+} 
+
+/* background-color for alt-text */
+.page-main__news::before {
+	position: absolute;
+	z-index: -1;
+	content:"";
+
+	width: 100%;
+	height: 100%;
+
+	background-color: #575757;
+	box-shadow: inset 0 0 140px 15px #000;
+}
+
+/* correction news-title */
+.page-main__news-title {
+	display: flex;
+	margin-top: 130px;
+}
+
+.page-main__news-link {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 72px;
+	line-height: 84px;
+	letter-spacing: 2px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.page-main__news-link:hover,
+.page-main__news-link:focus {
+	box-shadow: 0 5px 0 0 #FF7931;
+}
+
+.page-main__news-text {
+	width: 456px;
+	min-height: 64px;
+	margin: 0;
+	padding: 0;
+
+	font-size: 14px;
+	line-height: 21px;
+	text-align: center;
+
+	color: #fff;
+}
+
+/* correcttion like in mockup */
+.page-main__news-text::first-line {
+	line-height: 30px;
+}
+
+.page-main__wrapper-image {
+	position: absolute;
+	z-index: -1;
+	
+	width: 100%;
+	height: 100%;
+}
+
+.page-main__wrapper-image::before {
+	position: absolute;
+	content: "";
+
+	width: 100%;
+	height: 100%;
+
+	background-image: url("../images/Hotel-11.jpg");
+	background-position: center center;
+	background-size: cover;
+}
+
+/* reviews section */
+.page-main__reviews {
+	display: flex;
+	flex-direction: column;
+	
+	width: auto;
+	min-height: 329px;
+	margin-bottom: 46px;
+}
+
+/* correction reviews-header */
+.page-main__reviews-header {
+	align-self: center;
+	margin-bottom: 20px;
+
+	text-indent: -2px;
+}
+
+/* reviews-list */
+.page-main__reviews-list {
+	display: flex;
+	flex-wrap: wrap;
+	width: auto;
+	margin-top: -17px;
+}
+
+.page-main__reviews-item {
+	display: flex;
+	flex-direction: column;
+	width: 370px;
+	min-height: 329px;
+	margin-top: 17px;
+	margin-right: 30px;
+}
+
+.page-main__reviews-item:nth-child(3n) {
+	margin-right: 0;
+}
+
+.page-main__reviews-link {
+	display: flex;
+	flex-direction: column;
+}
+
+/* reviews decor title color */
+.page-main__reviews-item:nth-child(2n)  .page-main__reviews-title {
+	color: #FF7931;
+}	
+
+/* reviews title hover, focus */
+.page-main__reviews-item:nth-child(2n) .page-main__reviews-link:hover .page-main__reviews-title,
+.page-main__reviews-item:nth-child(2n) .page-main__reviews-link:focus .page-main__reviews-title   {
+	color: #000;
+	outline: 2px dashed #FF7931;
+}
+
+/* correction reviews 1st child title */
+.page-main__reviews-item:first-child .page-main__reviews-title {
+	text-indent: 3px;
+}
+
+.page-main__reviews-image {
+	position: relative;
+
+	display: flex;
+	width: 370px;
+	height: 203px;
+	margin-bottom: 22px;
+
+	text-align: center;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	color: #fff;
+	
+	overflow: hidden;
+}
+
+/* if no loaded image background */
+.page-main__reviews-image::before {
+	position: absolute;
+	content: "";
+
+	width: 100%;
+	height: 100%;
+
+	background-color: #575757;
+	box-shadow: inset 0 0 140px 15px #000;
+}
+
+/* correction reviews-title */
+.page-main__reviews-title {
+	margin-bottom: 7px;
+
+	font-family: "Playfair Display";
+	font-style: normal;
+	font-weight: 900;
+	font-size: 23px;
+	line-height: 31px;
+}
+
+/* reviews hover, focus */
+.page-main__reviews-link:hover,
+.page-main__reviews-link:focus {
+	color: #FF7931;
+	box-shadow: 
+		0 -5px 0 0 #fff,
+		0 -9px 0 0 #FF7931;
+} 
+
+.page-main__reviews-text {
+	display: flex;
+}
+
+/* subscription section */
+.page-main__subscription {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	min-height: 556px;
+
+	background-color: transparent;
+}
+
+/* background, circle decor */
+.page-main__subscription::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -2;
+	content: "";
+
+	width: 100%;
+	height: 100%;
+
+	background-color: #F7F7F7;
+}
+
+/* circle decor */
+.page-main__subscription::after {
+	position: absolute;
+	z-index: -1;	
+	content: "";
+
+	/* hello flex */
+	align-self: center;
+
+	width: 707px;
+	height: 707px;
+
+	background-color: #fff;
+	border-radius: 50%;
+}
+
+.page-main__subscription-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: auto;
+	min-height: 556px;
+}
+
+/* correction subscription-header */
+.page-main__subscription-header {
+	margin-top: 37px;
+	margin-bottom: 37px;
+}
+
+/* subscription list */
+.page-main__subscription-list {
+	display: flex;
+	flex-direction: column;
+
+	width: 385px;
+	min-height: 340px;
+	margin-bottom: 44px;
+}
+
+.page-main__subscription-item {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	min-height: 30px;
+	margin-bottom: 48px;
+	text-align: center;
+}
+
+.page-main__subscription-item:last-child {
+	margin-bottom: 0;
+}
+
+.page-main__subscription-item::before {
+	position: absolute;
+	bottom: -28px;
+	content: "";
+
+	/* hello flex */
+	align-self: center;
+
+	width: 100px;
+	height: 1px;
+
+	background-color: rgba(000, 000, 000, 0.2);
+}
+
+.page-main__subscription-item:last-child::before {
+	background-color: transparent;
+}
+
+/* correction subscription title */
+.page-main__subscription-title {
+	margin-bottom: 2px;
+}
+
+.page-main__subscription-text {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	max-width: 385px;
+	min-height: 30px;
+	margin-top: 5px;
+}
+
+/* subscription button */
+.page-main__subscription-button {
+	position: relative;			
+
+	box-sizing: border-box;	
+
+	display: flex;
+	align-items: center;
+	max-width: 430px;
+	min-height: 47px;
+	padding-left: 30px;
+	padding-right: 61px;
+
+	font-family: "Roboto Regular";
+	font-size: 12px;
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #fff;
+
+	background-color: #FF7931;
+}
+
+/* button decor */
+.page-main__subscription-button::before {
+	position: absolute;
+	right: 28px;
+	content: "";
+
+	width: 25px;
+	height: 25px;
+
+	background-image: url("../images/sprite.png");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+.page-main__subscription-button:hover,
+.page-main__subscription-button:focus {
+	background-color: rgb(235, 99, 26);
+	outline: 3px solid #FF7931;
+	outline-offset: 3px;
+}
+
+/* footer */
+.page-footer {
+	box-sizing: border-box;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: auto;
+	min-height: 295px;
+	margin-top: 55px;
+	padding-bottom: 47px;
+
+	background-color: #575757;
+}
+
+/* logo */
+.page-footer__logo {
+	display: flex;
+	margin-top: 30px;
+	margin-bottom: 27px;
+}
+
+.page-footer__logo-image {
+	display: flex;
+	width: 281px;
+	height: 38px;
+}
+
+/* correction footer navigation list */
+.page-footer__nav-list {
+	margin-bottom: 42px;
+	padding-bottom: 46px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.page-footer__nav-link  {
+	color: #fff;
+}	
+
+/* social */
+.page-footer__social-list {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1170px;
+	min-height: 47px;
+	margin-top: -15px;
+}
+
+.page-footer__social-item {
+	display: flex;
+	margin-top: 15px;
+	margin-right: 15px;
+	width: 47px;
+	height: 47px;
+}
+
+.page-footer__social-item:last-child {
+	margin-right: 0;
+}
+
+.page-footer__social-link {
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+
+	background-color: #fff;
+}
+
+/* social decor */
+.page-footer__social-link::before {
+	position: absolute;
+	content: "";
+	
+	width: 25px;
+	height: 25px;
+
+	background-image: url("../images/sprite.png");
+	background-repeat: no-repeat;
+}
+
+.page-footer__social-item:nth-child(1) .page-footer__social-link::before {
+	background-position: 0 -24px;
+}
+
+.page-footer__social-item:nth-child(2) .page-footer__social-link::before {
+	background-position: 0 -52px;
+}
+
+.page-footer__social-item:nth-child(3) .page-footer__social-link::before {
+	background-position: 0 -77px;
+}
+
+/* social hover, focus */
+.page-footer__social-link:hover,
+.page-footer__social-link:focus {
+	background-color: #FF7931;
+	outline: 3px solid white;
+}
